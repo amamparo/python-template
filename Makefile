@@ -12,3 +12,5 @@ types:
 
 test:
 	poetry run python -m unittest discover -s 'tests' -p '*.py'
+
+check: lint types test
