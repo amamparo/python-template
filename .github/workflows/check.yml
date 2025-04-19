@@ -1,7 +1,6 @@
-name: CI
 on: [ workflow_dispatch, push ]
 jobs:
-  ci:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,4 +10,5 @@ jobs:
       - uses: snok/install-poetry@v1
       - run: make install
       - run: make lint
+      - run: make types
       - run: make test
