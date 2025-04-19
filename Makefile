@@ -1,5 +1,5 @@
 install:
-	poetry install
+	poetry install --no-root
 
 run:
 	poetry run python -m src.main
